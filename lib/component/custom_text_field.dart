@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../const/colors.dart';
 import 'package:flutter/services.dart';
+import 'package:calendar_scheduler/const/colors.dart';
 
 class CustomTextField extends StatelessWidget {
   final String label;
@@ -8,7 +8,13 @@ class CustomTextField extends StatelessWidget {
   final FormFieldSetter<String> onSaved;
   final FormFieldValidator<String> validator;
 
-  const CustomTextField({super.key, required this.label, required this.isTime, required this.onSaved, required this.validator});
+  const CustomTextField({
+    required this.label,
+    required this.isTime,
+    required this.onSaved,
+    required this.validator,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,28 +23,26 @@ class CustomTextField extends StatelessWidget {
       children: [
         Text(
           label,
-          style: TextStyle(color: PRIMARY_COLOR, fontWeight: FontWeight.w600),
+          style: TextStyle(
+            color: PRIMARY_COLOR,
+            fontWeight: FontWeight.w600,
+          ),
         ),
         Expanded(
-          flex: isTime ? 0 : 1,
+          flex: isTime? 0 : 1,
           child: TextFormField(
-            onSaved: onSaved,
-            validator: validator,
+            onSaved: onSaved, // 폼 저장했을때 실행할 함수
+            validator: validator, // 폼 검증했을 때 실행할 함수
             cursorColor: Colors.grey,
-            maxLines: isTime ? 1 : null,
+            maxLines: isTime? 1 : null,
             expands: !isTime,
-            keyboardType:
-                isTime ? TextInputType.number : TextInputType.multiline,
-            inputFormatters: isTime
-                ? [
-                    FilteringTextInputFormatter.digitsOnly,
-                  ]
-                : [],
+            keyboardType: isTime? TextInputType.number : TextInputType.multiline,
+            inputFormatters: isTime? [FilteringTextInputFormatter.digitsOnly] : [],
             decoration: InputDecoration(
-                border: InputBorder.none,
-                filled: true,
-                fillColor: Colors.grey[300],
-                suffixText: isTime ? '시' : null
+              border: InputBorder.none,
+              filled: true,
+              fillColor: Colors.grey[300],
+              suffixText: isTime? '시' : null,
             ),
           ),
         ),

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "45652185982",
+    "project_id": "calendar-scheduler-2d082",
+    "storage_bucket": "calendar-scheduler-2d082.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45652185982:android:c21ea30607cd56b0db992f",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1noHG78K7W73Dra5ziFxhYArpoDu8nBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45652185982:android:1fcbd95d609a6e8fdb992f",
+        "android_client_info": {
+          "package_name": "com.example.calendar_scheduler"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1noHG78K7W73Dra5ziFxhYArpoDu8nBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
